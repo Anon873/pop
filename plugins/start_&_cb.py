@@ -34,13 +34,12 @@ async def start(client, message):
     user = message.from_user
     await db.add_user(client, message)                
     button = InlineKeyboardMarkup([[
-        InlineKeyboardButton("👨‍💻 Dᴇᴠꜱ 👨‍💻", callback_data='dev')
+        InlineKeyboardButton("👨‍💻 Dᴇᴠꜱ", callback_data='help')
         ],[
         InlineKeyboardButton('📯 Uᴩᴅᴀᴛᴇꜱ', url='https://t.me/PYRO_BOTZ'),
         InlineKeyboardButton('💁‍♂️ Sᴜᴩᴩᴏʀᴛ', url='https://t.me/PYRO_BOTZ_CHAT')
         ],[
-        InlineKeyboardButton('🎛️ Aʙᴏᴜᴛ', callback_data='about'),
-        InlineKeyboardButton('🛠️ Hᴇʟᴩ', callback_data='help')
+        InlineKeyboardButton('🎛️ Aʙᴏᴜᴛ', callback_data='about')
     ]])
     if Config.START_PIC:
         await message.reply_photo(Config.START_PIC, caption=Txt.START_TXT.format(user.mention), reply_markup=button)       

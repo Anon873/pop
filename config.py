@@ -49,16 +49,14 @@ class Config(object):
 class Txt(object):
     # part of text configuration
     START_TXT = """<b>Hᴀɪ {} 👋,
-Tʜɪs Is Aɴ Aᴅᴠᴀɴᴄᴇᴅ Aɴᴅ Yᴇᴛ Pᴏᴡᴇʀꜰᴜʟ Rᴇɴᴀᴍᴇ Bᴏᴛ
-Usɪɴɢ Tʜɪs Bᴏᴛ Yᴏᴜ Cᴀɴ Rᴇɴᴀᴍᴇ & Cʜᴀɴɢᴇ Tʜᴜᴍʙɴᴀɪʟ Oꜰ Yᴏᴜʀ Fɪʟᴇ
-Yᴏᴜ Cᴀɴ Aʟsᴏ Cᴏɴᴠᴇʀᴛ Vɪᴅᴇᴏ Tᴏ Fɪʟᴇ & Fɪʟᴇ Tᴏ Vɪᴅᴇᴏ
-Tʜɪs Bᴏᴛ Aʟꜱᴏ Sᴜᴘᴘᴏʀᴛs Cᴜsᴛᴏᴍ Tʜᴜᴍʙɴᴀɪʟ Aɴᴅ Cᴜsᴛᴏᴍ Cᴀᴘᴛɪᴏɴ
-Tʜɪs Bᴏᴛ Wᴀs Cʀᴇᴀᴛᴇᴅ Bʏ : @Pyro_Botz 💞</b>"""
+Ｔʜɪｓ Ｉｓ Ａɴ Ａᴅᴠᴀɴᴄᴇᴅ Ａɴᴅ Ｙᴇᴛ Ｐᴏᴡᴇʀꜰᴜʟ Ｒᴇɴᴀᴍᴇ Ｂᴏᴛ
+Ｕｓɪɴɢ Ｔʜɪｓ Ｂᴏᴛ Ｙᴏᴜ Ｃᴀɴ Ｒᴇɴᴀᴍᴇ ＆ Ｃʜᴀɴɢᴇ Ｔʜᴜᴍʙɴᴀɪʟ Ｏꜰ Ｙᴏᴜʀ Ｆɪʟᴇ
+Ｙᴏᴜ Ｃᴀɴ Ａʟｓᴏ Ｃᴏɴᴠᴇʀᴛ Ｖɪᴅᴇᴏ Ｔᴏ Ｆɪʟᴇ ＆ Ｆɪʟᴇ Ｔᴏ Ｖɪᴅᴇᴏ
+Ｔʜɪｓ Ｂᴏᴛ Ａʟꜱᴏ Ｓᴜᴘᴘᴏʀᴛｓ Ｃᴜｓᴛᴏᴍ Ｔʜᴜᴍʙɴᴀɪʟ Ａɴᴅ Ｃᴜｓᴛᴏᴍ Ｃᴀᴘᴛɪᴏɴ</b>"""
 
     ABOUT_TXT = """<b>╭───────────⍟
 ├🤖 ᴍy ɴᴀᴍᴇ : {}
-├🖥️ Dᴇᴠᴇʟᴏᴩᴇʀꜱ : <a href=https://t.me/PYRO_BOTZ/53>𝗧𝗘𝗔𝗠 𝗣𝗬𝗥𝗢 𝗕𝗢𝗧𝗭</a> 
-├👨‍💻 Pʀᴏɢʀᴀᴍᴇʀ : <a href=https://github.com/lntechnical2>Lɴ Tᴇᴄʜ.ɢɪᴛ</a>
+├👨‍💻 Pʀᴏɢʀᴀᴍᴇʀ : <a href=https://t.me/it_was_abhi>ᴀʙʜɪ</a>
 ├📕 Lɪʙʀᴀʀy : <a href=https://github.com/pyrogram>Pyʀᴏɢʀᴀᴍ</a>
 ├✏️ Lᴀɴɢᴜᴀɢᴇ: <a href=https://www.python.org>Pyᴛʜᴏɴ 3</a>
 ├💾 Dᴀᴛᴀ Bᴀꜱᴇ: <a href=https://cloud.mongodb.com>Mᴏɴɢᴏ DB</a>

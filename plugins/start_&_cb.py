@@ -36,8 +36,8 @@ async def start(client, message):
     button = InlineKeyboardMarkup([[
         InlineKeyboardButton("•ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs•", callback_data='help')
         ],[
-        InlineKeyboardButton('•ᴜᴘᴅᴀᴛᴇs•', url='https://t.me/PYRO_BOTZ'),
-        InlineKeyboardButton('•sᴜᴩᴩᴏʀᴛ•', url='https://t.me/PYRO_BOTZ_CHAT')
+        InlineKeyboardButton('•ᴜᴘᴅᴀᴛᴇs•', url='https://t.me/All_Hindi_Anime'),
+        InlineKeyboardButton('•sᴜᴩᴩᴏʀᴛ•', url='https://t.me/botsupportx')
         ],[
         InlineKeyboardButton('ᴀʙᴏᴜᴛ ᴜꜱ 🥀', callback_data='about')
     ]])
@@ -57,8 +57,8 @@ async def cb_handler(client, query: CallbackQuery):
             reply_markup = InlineKeyboardMarkup([[
                 InlineKeyboardButton("•ʜᴇʟᴘ & ᴄᴏᴍᴍᴀɴᴅs•", callback_data='help')
                 ],[
-                InlineKeyboardButton('•ᴜᴘᴅᴀᴛᴇs•', url='https://t.me/PYRO_BOTZ'),
-                InlineKeyboardButton('•sᴜᴩᴩᴏʀᴛ•', url='https://t.me/PYRO_BOTZ_CHAT')
+                InlineKeyboardButton('•ᴜᴘᴅᴀᴛᴇs•', url='https://t.me/All_Hindi_Anime'),
+                InlineKeyboardButton('•sᴜᴩᴩᴏʀᴛ•', url='https://t.me/botsupportx')
                 ],[
                 InlineKeyboardButton('ᴀʙᴏᴜᴛ ᴜꜱ 🥀', callback_data='about')
     ]])

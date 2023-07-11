@@ -27,7 +27,6 @@ from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ForceReply, CallbackQuery
 from helper.database import db
 from config import Config
-from hlep import txt
   
 
 @Client.on_message(filters.private & filters.command("start"))

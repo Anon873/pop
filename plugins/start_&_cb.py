@@ -74,7 +74,7 @@ async def cb_handler(client, query: CallbackQuery):
                 InlineKeyboardButton("ꜰɪʟᴇ", callback_data="rename")
                 ],[
                 InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data = "close"),
-                InlinekeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
     ]])
         )
     elif data == "about":

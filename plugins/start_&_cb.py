@@ -68,10 +68,10 @@ async def cb_handler(client, query: CallbackQuery):
             text=Txt.HELP_TXT,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
-                InlineKeyboardButton()
+                InlineKeyboardButton("ᴄᴜꜱᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ", callback_data="custom")
                 ],[
-                InlineKeyboardButton(),
-                InlineKeyboardButton()
+                InlineKeyboardButton("ᴛʜᴜᴍʙɴᴀɪʟ", callback_data="thumb"),
+                InlineKeyboardButtonʀᴇɴᴀᴍᴇ("ꜰɪʟᴇ", callback_data="rename")
                 ],[
                 InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data = "close"),
                 InlinekeyboardButton("ʙᴀᴄᴋ", callback_data = "start")

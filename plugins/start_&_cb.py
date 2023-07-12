@@ -92,6 +92,33 @@ async def cb_handler(client, query: CallbackQuery):
                 InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
             ]])          
         )
+    elif data == "rename":
+        await query.message.edit_text(
+            text=Txt.REX_TXT,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup([[
+                InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data = "close"),
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
+            ]])          
+                                    )
+    elif data == "thumb":
+        await query.message.edit_text(
+            text=Txt.RET_TXT,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup([[
+                InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data = "close"),
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
+            ]])          
+                                     )
+    elif data == "custom":
+        await query.message.edit_text(
+            text=Txt.REX2_TXT,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup([[
+                InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data = "close"),
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
+            ]])          
+        )
     elif data == "close":
         try:
             await query.message.delete()

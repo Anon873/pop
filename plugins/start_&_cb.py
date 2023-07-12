@@ -29,7 +29,7 @@ from helper.database import db
 from config import Config
 
 
-@Client.on_message(filters.private & filters.command("start"))
+@Client.on_message((filters.private & filters.command("start")) & filters.user(Config.ADMIN))
 async def start(client, message):
     user = message.from_user
     await db.add_user(client, message)                

@@ -71,10 +71,10 @@ async def cb_handler(client, query: CallbackQuery):
                 InlineKeyboardButton("ᴄᴜꜱᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ", callback_data="custom")
                 ],[
                 InlineKeyboardButton("ᴛʜᴜᴍʙɴᴀɪʟ", callback_data="thumb"),
-                InlineKeyboardButton("ꜰɪʟᴇ", callback_data="rename")
+                InlineKeyboardButton("ʀᴇɴᴀᴍᴇ ꜰɪʟᴇ", callback_data="rename")
                 ],[
                 InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data = "close"),
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "help")
     ]])
         )
     elif data == "about":

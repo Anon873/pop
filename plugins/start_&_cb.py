@@ -28,19 +28,6 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ForceRepl
 from helper.database import db
 from config import Config
 
-@Client.on_message((filters.private & filters.command("start1")) & filters.reply)
-async def start(client, message):
-    user = message.from_user
-    await db.add_user(client, message)
-    button = InlineKeyboardMarkup([[
-                InlineKeyboardButton("ᴄᴏɴᴛᴀᴄᴛ", callback_data = "apk"),
-                InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data = "close")
-    ]]) 
-    if Config.START_PIC:
-        await message.reply_photo(Config.START_PIC, caption=Txt.START_TXT.format(user.mention), reply_markup=button)       
-    else:
-        await message.reply_text(text=Txt.START_TXT.format(user.mention), reply_markup=button, disable_web_page_preview=True)
-
 
 @Client.on_message((filters.private & filters.command("pvtstart")) & filters.user(Config.ADMIN))
 async def start(client, message):
@@ -87,7 +74,7 @@ async def cb_handler(client, query: CallbackQuery):
                 InlineKeyboardButton("ʀᴇɴᴀᴍᴇ ꜰɪʟᴇ", callback_data="rename")
                 ],[
                 InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data = "close"),
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "pvtstart")
     ]])
         )
     elif data == "about":
@@ -97,7 +84,7 @@ async def cb_handler(client, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup([[
                 #⚠️ don't change source code & source link ⚠️ #
                 InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data = "close"),
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "pvtstart")
             ]])            
         )
     elif data == "dev":
@@ -106,7 +93,7 @@ async def cb_handler(client, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data = "close"),
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "start")
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "pvtstart")
             ]])          
         )
     elif data == "rename":
@@ -115,7 +102,7 @@ async def cb_handler(client, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data = "close"),
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "help")
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "pvthelp")
             ]])          
                                     )
     elif data == "thumb":
@@ -124,7 +111,7 @@ async def cb_handler(client, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data = "close"),
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "help")
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "pvthelp")
             ]])          
                                      )
     elif data == "custom":
@@ -133,7 +120,7 @@ async def cb_handler(client, query: CallbackQuery):
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup([[
                 InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data = "close"),
-                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "help")
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "pvthelp")
             ]])          
         )
     elif data == "close":

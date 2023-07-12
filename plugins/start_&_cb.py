@@ -71,7 +71,7 @@ async def cb_handler(client, query: CallbackQuery):
                 InlineKeyboardButton("ᴄᴜꜱᴛᴏᴍ ᴄᴀᴘᴛɪᴏɴ", callback_data="custom")
                 ],[
                 InlineKeyboardButton("ᴛʜᴜᴍʙɴᴀɪʟ", callback_data="thumb"),
-                InlineKeyboardButtonʀᴇɴᴀᴍᴇ("ꜰɪʟᴇ", callback_data="rename")
+                InlineKeyboardButton("ꜰɪʟᴇ", callback_data="rename")
                 ],[
                 InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data = "close"),
                 InlinekeyboardButton("ʙᴀᴄᴋ", callback_data = "start")

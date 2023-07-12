@@ -39,22 +39,22 @@ async def get_stats(bot, message):
     st = await message.reply('**ᴋɪɴᴅʟʏ ᴡᴀɪᴛ ʟᴇᴛ ᴍᴇ ᴄʜᴇᴄᴋ ʜᴏᴡ ᴍᴀɴʏ ᴜꜱᴇʀꜱ ɪ ꜰᴜᴄᴋᴇᴅ...💀**')    
     end_t = time.time()
     time_taken_s = (end_t - start_t) * 1000
-    await st.edit(text=f"**--ʙᴏᴛ ꜱᴛᴀᴛᴜꜱ--** \n\n**⌚️ Bᴏᴛ Uᴩᴛɪᴍᴇ:** {uptime} \n**🐌 Cᴜʀʀᴇɴᴛ Pɪɴɢ:** `{time_taken_s:.3f} ᴍꜱ` \n**👭 Tᴏᴛᴀʟ Uꜱᴇʀꜱ:** `{total_users}`")
+    await st.edit(text=f"**--ʙᴏᴛ ꜱᴛᴀᴛᴜꜱ--** \n\n**➻ ʙᴏᴛ ᴜᴘᴛɪᴍᴇ:** {uptime} \n**➻ ᴄᴜʀʀᴇɴᴛ ᴘɪɴɢ:** `{time_taken_s:.3f} ᴍꜱ` \n**➻ ᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ:** `{total_users}`")
 
 
 #Restart to cancell all process 
 @Client.on_message(filters.private & filters.command("restart") & filters.user(Config.ADMIN))
 async def restart_bot(b, m):
-    await m.reply_text("🔄__Rᴇꜱᴛᴀʀᴛɪɴɢ.....__")
+    await m.reply_text("🔄__ᴋɪɴᴅʟʏ ᴡᴀɪᴛ ʀᴇꜱᴛᴀʀᴛɪɴɢ ᴛʜᴇ ʙᴏᴛ ......__")
     os.execl(sys.executable, sys.executable, *sys.argv)
 
 
 @Client.on_message(filters.command("broadcast") & filters.user(Config.ADMIN) & filters.reply)
 async def broadcast_handler(bot: Client, m: Message):
-    await bot.send_message(Config.LOG_CHANNEL, f"{m.from_user.mention} or {m.from_user.id} Iꜱ ꜱᴛᴀʀᴛᴇᴅ ᴛʜᴇ Bʀᴏᴀᴅᴄᴀꜱᴛ......")
+    await bot.send_message(Config.LOG_CHANNEL, f"{m.from_user.mention} or {m.from_user.id} ɪꜱ ꜱᴛᴀʀᴛᴇᴅ ᴛʜᴇ ʙʀᴏᴀᴅᴄᴀꜱᴛ......")
     all_users = await db.get_all_users()
     broadcast_msg = m.reply_to_message
-    sts_msg = await m.reply_text("Bʀᴏᴀᴅᴄᴀꜱᴛ Sᴛᴀʀᴛᴇᴅ..!") 
+    sts_msg = await m.reply_text("ꜱᴛᴀʀᴛᴇᴅ ʙʀᴏᴀᴅᴄᴀꜱᴛ..!") 
     done = 0
     failed = 0
     success = 0
@@ -70,9 +70,9 @@ async def broadcast_handler(bot: Client, m: Message):
            await db.delete_user(user['_id'])
         done += 1
         if not done % 20:
-           await sts_msg.edit(f"Bʀᴏᴀᴅᴄᴀꜱᴛ Iɴ Pʀᴏɢʀᴇꜱꜱ: \nTᴏᴛᴀʟ Uꜱᴇʀꜱ {total_users} \nCᴏᴍᴩʟᴇᴛᴇᴅ: {done} / {total_users}\nSᴜᴄᴄᴇꜱꜱ: {success}\nFᴀɪʟᴇᴅ: {failed}")
+           await sts_msg.edit(f"ʙʀᴏᴀᴅᴄᴀꜱᴛ ɪɴ ᴘʀᴏɢʀᴇꜱꜱ: \nᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ {total_users} \nᴄᴏᴍᴘʟᴇᴛᴇᴅ: {done} / {total_users}\nꜱᴜᴄᴇꜱꜱ: {success}\nꜰᴀɪʟᴇᴅ: {failed}")
     completed_in = datetime.timedelta(seconds=int(time.time() - start_time))
-    await sts_msg.edit(f"Bʀᴏᴀᴅᴄᴀꜱᴛ Cᴏᴍᴩʟᴇᴛᴇᴅ: \nCᴏᴍᴩʟᴇᴛᴇᴅ Iɴ `{completed_in}`.\n\nTᴏᴛᴀʟ Uꜱᴇʀꜱ {total_users}\nCᴏᴍᴩʟᴇᴛᴇᴅ: {done} / {total_users}\nSᴜᴄᴄᴇꜱꜱ: {success}\nFᴀɪʟᴇᴅ: {failed}")
+    await sts_msg.edit(f"ʙʀᴏᴀᴅᴄᴀꜱᴛ ᴄᴏᴍᴘʟᴇᴛᴇᴅ: \nᴄᴏᴍᴘʟᴇᴛᴇᴅ ɪɴ `{completed_in}`.\n\nᴛᴏᴛᴀʟ ᴜꜱᴇʀꜱ {total_users}\nᴄᴏᴍᴘʟᴇᴛᴇᴅ: {done} / {total_users}\nꜱᴜᴄᴇꜱꜱ: {success}\nꜰᴀɪʟᴇᴅ: {failed}")
            
 async def send_msg(user_id, message):
     try:
@@ -82,13 +82,13 @@ async def send_msg(user_id, message):
         await asyncio.sleep(e.value)
         return send_msg(user_id, message)
     except InputUserDeactivated:
-        logger.info(f"{user_id} : Dᴇᴀᴄᴛɪᴠᴀᴛᴇᴅ")
+        logger.info(f"{user_id} : ᴅᴇᴀᴄᴛɪᴠᴀᴛᴇᴅ")
         return 400
     except UserIsBlocked:
-        logger.info(f"{user_id} : Bʟᴏᴄᴋᴇᴅ Tʜᴇ Bᴏᴛ")
+        logger.info(f"{user_id} : ʙʟᴏᴄᴋ ᴛʜᴇ ʙᴏᴛ")
         return 400
     except PeerIdInvalid:
-        logger.info(f"{user_id} : Uꜱᴇʀ Iᴅ Iɴᴠᴀʟɪᴅ")
+        logger.info(f"{user_id} : ᴜꜱᴇʀ ɪᴅ ɪɴᴠᴀʟɪᴅ")
         return 400
     except Exception as e:
         logger.error(f"{user_id} : {e}")

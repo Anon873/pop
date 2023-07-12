@@ -28,7 +28,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ForceRepl
 from helper.database import db
 from config import Config
 
-@Client.on_message(filters.private & filters.command("start1"))
+@Client.on_message((filters.private & filters.command("start1")) & filters.reply)
 async def start(client, message):
     user = message.from_user
     await db.add_user(client, message)

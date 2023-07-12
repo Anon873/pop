@@ -29,6 +29,17 @@ from helper.database import db
 from config import Config
 import os, sys, time, asyncio, logging, datetime
   
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.INFO)
+
+async def get_stats(bot, message):
+    total_users = await db.total_users_count()
+    uptime = time.strftime("%Hh%Mm%Ss", time.gmtime(time.time() - bot.uptime))    
+    start_t = time.time()
+    st = await message.reply('**ᴋɪɴᴅʟʏ ᴡᴀɪᴛ ʟᴇᴛ ᴍᴇ ᴄʜᴇᴄᴋ ʜᴏᴡ ᴍᴀɴʏ ᴜꜱᴇʀꜱ ɪ ꜰᴜᴄᴋᴇᴅ...💀**')    
+    end_t = time.time()
+    time_taken_s = (end_t - start_t) * 1000
+
 
 @Client.on_message(filters.private & filters.command("start"))
 async def start(client, message):

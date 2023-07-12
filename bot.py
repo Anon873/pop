@@ -42,4 +42,4 @@ class Bot(Client):
             except:
                 print("ᴘʟᴇᴀꜱᴇ ᴍᴀᴋᴇ ᴛʜᴇ ʙᴏᴛ ᴀᴅᴍɪɴ ɪɴ ʏᴏᴜʀ ʟᴏɢ ᴄʜᴀɴɴᴇʟ.")
 
-await Bot().run()
+Bot().run()

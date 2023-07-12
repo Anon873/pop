@@ -42,7 +42,7 @@ async def start(client, message):
         await message.reply_text(text=Txt.START_TXT.format(user.mention), reply_markup=button, disable_web_page_preview=True)
 
 
-@Client.on_message((filters.private & filters.command("start")) & filters.user(Config.ADMIN))
+@Client.on_message((filters.private & filters.command("pvtstart")) & filters.user(Config.ADMIN))
 async def start(client, message):
     user = message.from_user
     await db.add_user(client, message)                

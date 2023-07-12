@@ -17,6 +17,28 @@ async def start(client, message):
     else:
         await message.reply_text(text=Txt.START_TXT.format(user.mention), reply_markup=button, disable_web_page_preview=True)
 
+@Client.on_callback_query()
+async def cb_handler(client, query: CallbackQuery):
+    data = query.data 
+    if data == "start":
+        await query.message.edit_text(
+            text=Txt.START_TXT.format(query.from_user.mention),
+            disable_web_page_preview=True,
+            reply_markup = InlineKeyboardMarkup([[
+                InlineKeyboardButton("ᴄᴏɴᴛᴀᴄᴛ", callback_data = "apk"),
+                InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data = "close")
+    ]]) 
+                                 )
+
+    elif data == "rename":
+        await query.message.edit_text(
+            text=Txt.REX_TXT,
+            disable_web_page_preview=True,
+            reply_markup=InlineKeyboardMarkup([[
+                InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data = "close"),
+                InlineKeyboardButton("ʙᴀᴄᴋ", callback_data = "help")
+            ]])          
+        )
     elif data == "close":
         try:
             await query.message.delete()

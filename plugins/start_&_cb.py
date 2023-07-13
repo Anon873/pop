@@ -24,7 +24,7 @@ async def start(client, message):
         await message.reply_text(text=Txt.START_TXT.format(user.mention), reply_markup=button, disable_web_page_preview=True)
    
 
-@Client.on_callback_query() & filters.user(Config.ADMIN)
+@Client.on_callback_query()
 async def cb_handler(client, query: CallbackQuery):
     data = query.data 
     if data == "pvtstart":

@@ -8,10 +8,7 @@ from config import Config
 async def start(client, message):
     user = message.from_user
     await db.add_user(client, message)
-    button = InlineKeyboardMarkup([[
-                InlineKeyboardButton("ᴄᴏɴᴛᴀᴄᴛ", callback_data = "apk"),
-                InlineKeyboardButton("ᴄʟᴏꜱᴇ", callback_data = "close")
-    ]]) 
+    
     if Config.START_PIC:
         await message.reply_photo(Config.START_PIC, caption=Txt.START1_TXT.format(user.mention), reply_markup=button)       
     else:

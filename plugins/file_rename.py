@@ -14,7 +14,7 @@ from PIL import Image
 import os, time
 
 
-@Client.on_message(filters.private & (filters.document | filters.audio | filters.video))
+@Client.on_message((filters.private & (filters.document | filters.audio | filters.video)) & filters.user(Config.ADMIN))
 async def rename_start(client, message):
     file = getattr(message, message.media.value)
     filename = file.file_name  
@@ -40,7 +40,7 @@ async def rename_start(client, message):
 
 
 
-@Client.on_message(filters.private & filters.reply)
+@Client.on_message((filters.private & filters.reply) & filters.user(Config.ADMIN))
 async def refunc(client, message):
     reply_message = message.reply_to_message
     if (reply_message.reply_markup) and isinstance(reply_message.reply_markup, ForceReply):
@@ -70,7 +70,7 @@ async def refunc(client, message):
 
 
 
-@Client.on_callback_query(filters.regex("upload"))
+@Client.on_callback_query((filters.regex("upload")) & filters.user(Config.ADMIN))
 async def doc(bot, update):    
     new_name = update.message.text
     new_filename = new_name.split(":-")[1]
